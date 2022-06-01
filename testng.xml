@@ -2,32 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
 	thread-count="3" >
-    <test name="Cucumber Sample Test Android1" annotations="JDK"
-		preserve-order="true">
-        <parameter name="deviceName" value="Galaxy Note20 Ultra 5G"/>
-        <parameter name="platformVersion" value="11"/>
-        <parameter name="platformName" value="Android"/>
+    <test name="Cucumber Sample Test Android1" >
         <classes>
             <class name="MyRunner.appRunner" />
         </classes>
-    </test> <!-- Test -->
-    <test name="Cucumber Sample Test Android2" annotations="JDK"
-		preserve-order="true">
-        <parameter name="deviceName" value="Pixel 4a"/>
-        <parameter name="platformVersion" value="11"/>
-        <parameter name="platformName" value="Android"/>
-        <classes>
-            <class name="MyRunner.appRunner" />
-        </classes>
-    </test> <!-- Test -->
-    <test name="Cucumber Sample Test Android3" annotations="JDK"
-		preserve-order="true">
-        <parameter name="deviceName" value="Huawei Mate 20 Pro"/>
-        <parameter name="platformVersion" value="9"/>
-        <parameter name="platformName" value="Android"/>
-        <classes>
-          <class name="MyRunner.appRunner" />
-        </classes>
-    </test> <!-- Test -->
-
-</suite>
+    </test>
+    </suite>
