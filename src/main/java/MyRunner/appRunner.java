@@ -12,7 +12,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 @CucumberOptions(
-        features = "src/test/java/Features/appFeature/app.feature",
+        features = "src/main/java/Features/app.feature",
         glue = {"stepDefinitions"}
 )
 public class appRunner {
@@ -47,7 +47,9 @@ public class appRunner {
     public Object[][] features() {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
         System.out.println("Cucumber runner initialized");
+        System.out.println(testNGCucumberRunner.provideFeatures().length);
         return testNGCucumberRunner.provideFeatures();
+
     }
     @AfterClass(alwaysRun = true)
     public void tearDownClass() throws Exception {
